@@ -15,10 +15,10 @@ UPDATES / TODO / DONE 2025:
 - [ ] add version tags / release / release cycle
 - [ ] add linker tags / rev / semver 
 - [ ] add nixos package prometheus-solaredge-exporter
-- [ ] and native integration service module: services.prometheus.exporter.solaredge.enable = true;
+- [ ] and nixos native integration: services.prometheus.exporter.solaredge.enable = true;
 
 
-================== LEGACY: README.md LICENSE.md (unmodified) =====================================
+========= LEGACY: README.md LICENSE.md (unmodified) ========
 
 # SolarEdge Prometheus Exporter
 
