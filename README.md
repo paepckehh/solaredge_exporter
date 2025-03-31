@@ -1,6 +1,7 @@
 forked: github.com/dave92082/solaredge-exporter 
-=> stale/last commit: 5 years ago (no updates or dependency bumps since November 2020) 
-=> credit goes to the author 
+- credit goes to the author 
+- stale/last commit: 5 years ago
+- no updates or dependency build bumps since Nov 2020
 
 
 UPDATES / TODO / DONE 2025:
