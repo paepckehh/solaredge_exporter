@@ -1,4 +1,6 @@
-fork: github.com/dave92082/solaredge-exporter => stale/last commit: 5 years ago (November 2020) (credit goes to the author) 
+forked: github.com/dave92082/solaredge-exporter 
+=> stale/last commit: 5 years ago (no updates or dependency bumps since November 2020) 
+=> credit goes to the author 
 
 UPDATES/TODO/DONE 2025:
 - [X] seperate main program into cmd/solaredge_exporter 
