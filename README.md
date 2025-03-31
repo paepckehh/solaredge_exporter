@@ -8,7 +8,7 @@ UPDATES / TODO / DONE 2025:
 - [X] migrate main repo into library only mode
 - [X] update / refactor dependencies 
 - [X] add Makefiles for build / automatic dependency updates / code quality checks
-- [ ] major code cleanup / refactor  (adapt to prometheus exporter styleguide for config/option/parser/env...)
+- [ ] adapt to prometheus exporter styleguide for config/option/parser/env...
 - [ ] major code cleanup / refactor 
 - [ ] add golang release build packages
 - [ ] add ghrc.io docker builds
