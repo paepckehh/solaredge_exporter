@@ -1,0 +1,44 @@
+builds:
+  -
+    id: "solaredge_exporter"
+    binary: solaredge_exporter
+    main: ./cmd/solaredge_exporter/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - freebsd
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - 7
+archives:
+  -
+    id: solaredge_exporter-binaries
+    name_template: "solaredge_exporter-{{ .Os }}_{{ .Arch }}_{{ .Version }}"
+    files:
+      - LICENSE
+      - README.md
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+nfpms:
+  -
+    file_name_template: "solaredge_exporter_package_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    vendor: Michael Paepcke
+    homepage: https://paepcke.de/solaredge_exporter
+    maintainer: Michael Paepcke <git@paepcke.de>
+    description: solaredge_exporter
+    license: MIT
+    formats:
+      - deb
+      - rpm

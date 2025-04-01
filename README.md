@@ -12,7 +12,7 @@ UPDATES / TODO / DONE:
 - [X] add signed semver version tags
 - [X] add prometheus build time linker tag, semver version, build, date (including makefile examples)
 - [ ] major code cleanup / refactor 
-- [ ] add golang release build packages
+- [X] add golang release build packages
 - [ ] add ghrc.io docker builds
 - [ ] add linker tags / rev / semver 
 - [ ] add nixos package prometheus-solaredge-exporter
