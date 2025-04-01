@@ -1,3 +1,14 @@
+
+# OVERVIEW
+[![Go Reference](https://pkg.go.dev/badge/paepcke.de/tlsi.svg)](https://pkg.go.dev/paepcke.de/solaredge_exporter)
+[![Go Report Card](https://goreportcard.com/badge/paepcke.de/solaredge_exporter)](https://goreportcard.com/report/paepcke.de/solaredge_exporter) 
+[![Go Build](https://github.com/paepckehh/solaredge_exporter/actions/workflows/golang.yml/badge.svg)](https://github.com/paepckehh/solaredge_exporter/actions/workflows/golang.yml)
+[![License](https://img.shields.io/github/license/paepckehh/solaredge_exporter)](https://github.com/paepckehh/solaredge_exporter/blob/master/LICENSE)
+[![SemVer](https://img.shields.io/github/v/release/paepckehh/solaredge_exporter)](https://github.com/paepckehh/solaredge_exporter/releases/latest)
+<br>[![built with nix](https://builtwithnix.org/badge.svg)](https://search.nixos.org/packages?channel=unstable&show=solaredge_exporter&from=0&size=50&sort=relevance&type=packages&query=solaredge_exporter) 
+
+[paepcke.de/solaredge_exporter](https://paepcke.de/solaredge_exporter/)
+
 # SOLAREDGE_EXPORTER REBOOT 2025
 - Prometheus Exporter for Solaredge Solar Inverter 
 - Local TCP modbus access, local first, no cloud, no internet, no subscription service required 
@@ -17,8 +28,7 @@ forked: github.com/dave92082/solaredge-exporter
 - [ ] major code cleanup / refactor 
 - [X] add golang release build packages
 - [ ] add ghrc.io docker builds
-- [ ] add linker tags / rev / semver 
-- [ ] add nixos package prometheus-solaredge-exporter
+- [X] add nixos package prometheus-solaredge-exporter
 - [ ] and nixos native integration: services.prometheus.exporter.solaredge.enable = true;
 
 
