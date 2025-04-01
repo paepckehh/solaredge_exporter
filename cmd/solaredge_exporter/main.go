@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"math"
 	"net/http"
 	"os"
@@ -20,17 +19,11 @@ import (
 )
 
 func main() {
-	// Set up configuration
+	// configuration
 	config.InitConfig()
 
-	// Open Logger
-	f, err := os.OpenFile("SolarEdge-Exporter.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-	if err != nil {
-		fmt.Printf("Could not open log file: %s", err.Error())
-		return
-	}
-	defer f.Close()
-	m := io.MultiWriter(zerolog.ConsoleWriter{Out: os.Stdout}, f)
+	// logger
+	m := zerolog.ConsoleWriter{Out: os.Stdout}
 	log.Logger = log.Output(zerolog.SyncWriter(m))
 	zerolog.SetGlobalLevel(zerolog.InfoLevel)
 	if viper.GetBool("Log.Debug") {
@@ -49,7 +42,7 @@ func main() {
 
 	// Start Prometheus Handler
 	http.Handle("/metrics", promhttp.Handler())
-	err = http.ListenAndServe(viper.GetString("Exporter.ListenAddress")+":"+strconv.Itoa(viper.GetInt("Exporter.ListenPort")), nil)
+	err := http.ListenAndServe(viper.GetString("Exporter.ListenAddress")+":"+strconv.Itoa(viper.GetInt("Exporter.ListenPort")), nil)
 	if err != nil {
 		log.Error().Msgf("Could not start the prometheus metric server: %s", err.Error())
 	}
