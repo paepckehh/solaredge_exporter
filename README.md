@@ -1,10 +1,10 @@
+# PROMETHEUS SOLAREDGE_EXPORTER REBOOT 2025
+
 forked: github.com/dave92082/solaredge-exporter 
 - credit goes to the author 
 - stale/last commit: 5 years ago (no updates or dep bumps since Nov 2020)
 
-
-RESTART 2025
-UPDATES / TODO / DONE:
+2025 REBOOT ACTIONS UPDATES / TODO / DONE:
 - [X] seperate main program into cmd/solaredge_exporter 
 - [X] migrate main repo into library only mode
 - [X] update / refactor dependencies 
