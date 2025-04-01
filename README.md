@@ -1,4 +1,7 @@
-# PROMETHEUS SOLAREDGE_EXPORTER REBOOT 2025
+# SOLAREDGE_EXPORTER REBOOT 2025
+- Prometheus Exporter for Solaredge Solar Inverter 
+- Local TCP modbus access, local first, no cloud, no internet, no subscription service required 
+- Grafana Dashboards, Alerting, Monitoring, Actions
 
 forked: github.com/dave92082/solaredge-exporter 
 - credit goes to the author 
