@@ -3,6 +3,9 @@ PROJECT=$(shell basename $(CURDIR))
 all:
 	make -C cmd/$(PROJECT) all
 
+version:
+	make -C cmd/$(PROJECT) version
+
 deps: 
 	touch go.mod go.sum
 	rm go.mod go.sum

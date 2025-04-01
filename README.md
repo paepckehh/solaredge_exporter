@@ -1,19 +1,19 @@
 forked: github.com/dave92082/solaredge-exporter 
 - credit goes to the author 
-- stale/last commit: 5 years ago
-- no updates or dependency build bumps since Nov 2020
+- stale/last commit: 5 years ago (no updates or dep bumps since Nov 2020)
 
 
-UPDATES / TODO / DONE 2025:
+RESTART 2025
+UPDATES / TODO / DONE:
 - [X] seperate main program into cmd/solaredge_exporter 
 - [X] migrate main repo into library only mode
 - [X] update / refactor dependencies 
 - [X] add Makefiles for build / automatic dependency updates / code quality checks
-- [ ] adapt to prometheus exporter styleguide for config/option/parser/env...
+- [X] add signed semver version tags
+- [X] add prometheus build time linker tag, semver version, build, date (including makefile examples)
 - [ ] major code cleanup / refactor 
 - [ ] add golang release build packages
 - [ ] add ghrc.io docker builds
-- [ ] add version tags / release / release cycle
 - [ ] add linker tags / rev / semver 
 - [ ] add nixos package prometheus-solaredge-exporter
 - [ ] and nixos native integration: services.prometheus.exporter.solaredge.enable = true;

@@ -36,7 +36,8 @@ func main() {
 	if viper.GetBool("Log.Debug") {
 		zerolog.SetGlobalLevel(zerolog.DebugLevel)
 	}
-	log.Info().Msg("Starting SolarEdge-Exporter")
+	log.Info().Msg("Starting solaredge_exporter")
+	log.Info().Msgf("Version: %s", config.VersionInfo)
 	log.Info().Msgf("Configured Inverter Address: %s", viper.GetString("SolarEdge.InverterAddress"))
 	log.Info().Msgf("Configured Inverter Port: %d", viper.GetInt("SolarEdge.InverterPort"))
 	log.Info().Msgf("Configured Listen Address: %s", viper.GetString("Exporter.ListenAddress"))

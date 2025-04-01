@@ -23,10 +23,31 @@ SOFTWARE.
 */
 package config
 
-import "github.com/spf13/viper"
+import (
+	"flag"
+	"fmt"
+	"github.com/prometheus/common/version"
+	"github.com/spf13/viper"
+	"os"
+)
+
+// global
+var VersionInfo string
 
 // InitConfig initializes the viper configuration
 func InitConfig() {
+
+	VersionInfo = version.Info()
+
+	// commandline option parser to show version (--version)
+	showVersion := flag.Bool("version", false, "show version")
+	flag.Parse()
+	if *showVersion {
+		fmt.Printf("solaredge_export version: %s", VersionInfo)
+		os.Exit(0)
+	}
+
+	// init env setup
 	viper.SetConfigName("config")
 	viper.AddConfigPath(".")
 	viper.AddConfigPath("/etc/solaredge-exporter")
@@ -44,4 +65,5 @@ func InitConfig() {
 	viper.BindEnv("Log.Debug", "DEBUG_LOGGING")
 	viper.AutomaticEnv()
 	viper.ReadInConfig()
+
 }
