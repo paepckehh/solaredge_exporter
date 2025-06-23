@@ -6,7 +6,7 @@ require (
 	github.com/goburrow/modbus v0.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.22.0
-	github.com/prometheus/common v0.64.0
+	github.com/prometheus/common v0.65.0
 	github.com/rs/zerolog v1.34.0
 	github.com/spf13/viper v1.20.1
 	github.com/u-root/uio v0.0.0-20240224005618-d2acac8f3701
