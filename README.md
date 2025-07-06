@@ -1,6 +1,6 @@
 
 # OVERVIEW
-[![Go Reference](https://pkg.go.dev/badge/paepcke.de/tlsi.svg)](https://pkg.go.dev/paepcke.de/solaredge_exporter)
+[![Go Reference](https://pkg.go.dev/badge/paepcke.de/solaredge_exporter.svg)](https://pkg.go.dev/paepcke.de/solaredge_exporter)
 [![Go Report Card](https://goreportcard.com/badge/paepcke.de/solaredge_exporter)](https://goreportcard.com/report/paepcke.de/solaredge_exporter) 
 [![Go Build](https://github.com/paepckehh/solaredge_exporter/actions/workflows/golang.yml/badge.svg)](https://github.com/paepckehh/solaredge_exporter/actions/workflows/golang.yml)
 [![License](https://img.shields.io/github/license/paepckehh/solaredge_exporter)](https://github.com/paepckehh/solaredge_exporter/blob/master/LICENSE)
@@ -14,9 +14,8 @@
 - Local TCP modbus access, local first, no cloud, no internet, no subscription service required 
 - Grafana Dashboards, Alerting, Monitoring, Actions
 
-forked: github.com/dave92082/solaredge-exporter 
-- credit goes to the author 
-- stale/last commit: 5 years ago (no updates or dep bumps since Nov 2020)
+fork of stale: https://github.com/dave92082/solaredge-exporter 
+- stale/last commit: 5 years ago (no updates or dep bumps since Nov 2020), all credits goes to the author 
 
 2025 REBOOT ACTIONS UPDATES / TODO / DONE:
 - [X] seperate main program into cmd/solaredge_exporter 
@@ -32,7 +31,7 @@ forked: github.com/dave92082/solaredge-exporter
 - [ ] and nixos native integration: services.prometheus.exporter.solaredge.enable = true;
 
 
-========= LEGACY: README.md LICENSE.md (unmodified) ========
+========= LEGACY: README.md LICENSE (unmodified) ========
 
 # SolarEdge Prometheus Exporter
 

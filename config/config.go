@@ -43,7 +43,7 @@ func InitConfig() {
 	showVersion := flag.Bool("version", false, "show version")
 	flag.Parse()
 	if *showVersion {
-		fmt.Printf("solaredge_export version: %s", VersionInfo)
+		fmt.Printf("solaredge_exporter version: %s", VersionInfo)
 		os.Exit(0)
 	}
 
