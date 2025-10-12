@@ -67,14 +67,14 @@ func runCollection() {
 	defer handler.Close()
 
 	// Collect and log common inverter data
-	infoData, err := client.ReadHoldingRegisters(40000, 70)
-	cm, err := solaredge.NewCommonModel(infoData)
+	infoData, _ := client.ReadHoldingRegisters(40000, 70)
+	cm, _ := solaredge.NewCommonModel(infoData)
 	log.Info().Msgf("Inverter Model: %s", cm.C_Model)
 	log.Info().Msgf("Inverter Serial: %s", cm.C_SerialNumber)
 	log.Info().Msgf("Inverter Version: %s", cm.C_Version)
 
-	infoData2, err := client.ReadHoldingRegisters(40121, 65)
-	cm2, err := solaredge.NewCommonMeter(infoData2)
+	infoData2, _ := client.ReadHoldingRegisters(40121, 65)
+	cm2, _ := solaredge.NewCommonMeter(infoData2)
 	log.Info().Msgf("Meter Manufacturer: %s", cm2.C_Manufacturer)
 	log.Info().Msgf("Meter Model: %s", cm2.C_Model)
 	log.Info().Msgf("Meter Serial: %s", cm2.C_SerialNumber)
@@ -97,8 +97,8 @@ func runCollection() {
 			continue
 		}
 
-		infoData3, err := client.ReadHoldingRegisters(40188, 105)
-		mt, err := solaredge.NewMeterModel(infoData3)
+		infoData3, _ := client.ReadHoldingRegisters(40188, 105)
+		mt, _ := solaredge.NewMeterModel(infoData3)
 		log.Debug().Msgf("Meter AC Current: %f", float64(mt.M_AC_Current)*math.Pow(10, float64(mt.M_AC_Current_SF)))
 		log.Debug().Msgf("Meter VoltageLN: %f", float64(mt.M_AC_VoltageLN)*math.Pow(10, float64(mt.M_AC_Voltage_SF)))
 		log.Debug().Msgf("Meter PF: %d", mt.M_AC_PF)
